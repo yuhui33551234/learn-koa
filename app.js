@@ -13,7 +13,7 @@ app.use(async (ctx, next)=>{
     console.log(`Time :${ms}ms`)
 })
 
-app.use(async(ctx, next)=>{
+app.use(asyncgit(ctx, next)=>{
     await next();
     ctx.response.type = 'text/html';
     ctx.response.body='<h1>hello, koa2</h1>'
